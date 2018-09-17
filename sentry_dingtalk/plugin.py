@@ -109,7 +109,8 @@ class DingtalkPlugin(notify.NotificationPlugin):
 
     def notify_users(self, group, event, fail_silently=False): 
         url = self.get_webhook_urls(group.project)
-        link = self.get_group_url(group)
+        # link = self.get_group_url(group)
+        link = ""
         message_format = '[%s] %s   %s'
         message = message_format % (event.server_name, event.message, link)
         data = {"msgtype": "text",
